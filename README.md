@@ -1,5 +1,7 @@
-📊 **Daily Coding Progress**
+## 📊 Daily Coding Progress
 
-**85 Problems Solved**
+### 🎯 Total Solved
+
+**85 Problems**
 
 [**View Interactive Chart →**](https://ramyakudalkar.github.io/Daily-Coding-Progress/?utm_source=chatgpt.com)
