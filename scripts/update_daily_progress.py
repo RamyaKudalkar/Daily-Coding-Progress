@@ -156,13 +156,10 @@ with open(output, "w", encoding="utf-8") as file:
 readme = os.path.join(BASE, "README.md")
 
 chart_dates = sorted(set(leetcode) | set(codeforces))
-chart_values = []
-
-running_total = 0
-
-for date in chart_dates:
-    running_total += len(leetcode.get(date, [])) + len(codeforces.get(date, []))
-    chart_values.append(running_total)
+chart_values = [
+    len(leetcode.get(date, [])) + len(codeforces.get(date, []))
+    for date in chart_dates
+]
 
 chart_data = ",".join(
     f'"{date}":{value}' for date, value in zip(chart_dates, chart_values)
@@ -175,7 +172,7 @@ chart_url = (
     + "],datasets:[{label:%27Problems%20Solved%27,data:["
     + ",".join(map(str, chart_values))
     + "],borderWidth:0}]},options:{"
-    "scales:{xAxes:[{display:true}],yAxes:[{beginAtZero:true}]},"
+    "scales:{xAxes:[{display:false}],yAxes:[{beginAtZero:true,ticks:{stepSize:1}}]},"
     "legend:{display:false}}}"
 )
 
