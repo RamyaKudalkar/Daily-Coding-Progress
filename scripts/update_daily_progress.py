@@ -155,38 +155,13 @@ with open(output, "w", encoding="utf-8") as file:
 
 readme = os.path.join(BASE, "README.md")
 
-chart_dates = sorted(set(leetcode) | set(codeforces))
-chart_values = [
-    len(leetcode.get(date, [])) + len(codeforces.get(date, []))
-    for date in chart_dates
-]
-
-chart_data = ",".join(
-    f'"{date}":{value}' for date, value in zip(chart_dates, chart_values)
-)
-
-chart_url = (
-    "https://quickchart.io/chart?c="
-    "{type:%27bar%27,data:{labels:["
-    + ",".join(f"%27{d}%27" for d in chart_dates)
-    + "],datasets:[{label:%27Problems%20Solved%27,data:["
-    + ",".join(map(str, chart_values))
-    + "],borderWidth:0}]},options:{"
-    "scales:{xAxes:[{display:false}],yAxes:[{beginAtZero:true,ticks:{stepSize:1}}]},"
-    "legend:{display:false}}}"
-)
-
 readme_lines = [
-    "# 💻 Daily Coding Progress",
-    "",
-    "🎯 Total Solved",
-    "",
-    f"**{total} Problems**",
-    "",
-    "<!-- DAILY_CODING_PROGRESS_CHART_START -->",
-    f"![Daily Coding Progress]({chart_url})",
-    "<!-- DAILY_CODING_PROGRESS_CHART_END -->",
-    ""
+    '📊 **Daily Coding Progress**',
+    '',
+    f'**{total} Problems Solved**',
+    '',
+    '[**View Interactive Chart →**](https://ramyakudalkar.github.io/Daily-Coding-Progress/?utm_source=chatgpt.com)',
+    ''
 ]
 
 with open(readme, "w", encoding="utf-8") as file:
