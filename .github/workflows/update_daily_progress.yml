@@ -1,0 +1,49 @@
+name: Update Daily Progress
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Daily-Progress
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout LeetCode
+        uses: actions/checkout@v4
+        with:
+          repository: RamyaKudalkar/LeetCode
+          path: LeetCode
+          fetch-depth: 0
+
+      - name: Checkout Codeforces
+        uses: actions/checkout@v4
+        with:
+          repository: RamyaKudalkar/Codeforces
+          path: Codeforces
+          fetch-depth: 0
+
+      - name: Prepare paths
+        run: |
+          ln -s "$GITHUB_WORKSPACE/LeetCode" "$HOME/LeetCode"
+          ln -s "$GITHUB_WORKSPACE/Codeforces" "$HOME/Codeforces"
+
+      - name: Update progress
+        run: python3 scripts/update_daily_progress.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DAILY_PROGRESS.md
+          git diff --cached --quiet || git commit -m "Update daily coding progress"
+          git push
