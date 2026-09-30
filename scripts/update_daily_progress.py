@@ -148,12 +148,12 @@ for date in all_dates:
     lines.append("---")
     lines.append("")
 
-output = os.path.join(BASE, "DAILY_PROGRESS.md")
+output = os.path.join(BASE, "Daily-Coding-Progress.md")
 
 with open(output, "w", encoding="utf-8") as file:
     file.write("\n".join(lines))
 
-print("DAILY_PROGRESS.md updated successfully!")
+print("Daily-Coding-Progress.md updated successfully!")
 print(f"LeetCode: {total_leetcode}")
 print(f"Codeforces: {total_codeforces}")
 print(f"Total solved: {total}")
