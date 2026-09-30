@@ -40,10 +40,13 @@ jobs:
       - name: Update progress
         run: python3 scripts/update_daily_progress.py
 
+      - name: Update interactive chart
+        run: python3 scripts/update_interactive_chart.py
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Daily-Coding-Progress.md
+          git add Daily-Coding-Progress.md README.md docs/index.html
           git diff --cached --quiet || git commit -m "Update daily coding progress"
           git push
