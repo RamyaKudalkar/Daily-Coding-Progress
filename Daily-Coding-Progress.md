@@ -1,8 +1,6 @@
 # 📊 Daily Coding Progress
 
-### 🎯 Total Solved
-
-**85 Problems**
+**Total Solved: 85**
 
 ## 📅 September 15, 2026
 
