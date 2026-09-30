@@ -43,7 +43,7 @@ def format_leetcode(name):
     if match:
         number = match.group(1)
         title = match.group(2).replace("-", " ").title()
-        return f"Q{number} — {title}"
+        return f"Q{number} â€” {title}"
 
     return name
 
@@ -53,7 +53,7 @@ def format_codeforces(name):
     if match:
         number = match.group(1)
         title = match.group(2)
-        return f"{number} — {title}"
+        return f"{number} â€” {title}"
 
     return name
 
@@ -119,7 +119,7 @@ total_codeforces = sum(len(v) for v in codeforces.values())
 total = total_leetcode + total_codeforces
 
 lines = [
-    "# 📊 Daily Coding Progress",
+    "# ðŸ“Š Daily Coding Progress",
     "",
     f"**Total Solved: {total}**",
     ""
@@ -130,19 +130,19 @@ for date in all_dates:
         date, "%Y-%m-%d"
     ).strftime("%B %d, %Y")
 
-    lines.append(f"## 📅 {formatted_date}")
+    lines.append(f"## ðŸ“… {formatted_date}")
     lines.append("")
 
     if date in leetcode:
-        lines.append(f"🟢 **LeetCode — {len(leetcode[date])}**")
+        lines.append(f"ðŸŸ¢ **LeetCode â€” {len(leetcode[date])}**")
         for problem in leetcode[date]:
-            lines.append(f"• {problem}")
+            lines.append(f"â€¢ {problem}")
         lines.append("")
 
     if date in codeforces:
-        lines.append(f"🔵 **Codeforces — {len(codeforces[date])}**")
+        lines.append(f"ðŸ”µ **Codeforces â€” {len(codeforces[date])}**")
         for problem in codeforces[date]:
-            lines.append(f"• {problem}")
+            lines.append(f"â€¢ {problem}")
         lines.append("")
 
     lines.append("---")
@@ -153,7 +153,50 @@ output = os.path.join(BASE, "Daily-Coding-Progress.md")
 with open(output, "w", encoding="utf-8") as file:
     file.write("\n".join(lines))
 
+readme = os.path.join(BASE, "README.md")
+
+chart_dates = sorted(set(leetcode) | set(codeforces))
+chart_values = []
+
+running_total = 0
+
+for date in chart_dates:
+    running_total += len(leetcode.get(date, [])) + len(codeforces.get(date, []))
+    chart_values.append(running_total)
+
+chart_data = ",".join(
+    f'"{date}":{value}' for date, value in zip(chart_dates, chart_values)
+)
+
+chart_url = (
+    "https://quickchart.io/chart?c="
+    "{type:%27line%27,data:{labels:["
+    + ",".join(f"%27{d}%27" for d in chart_dates)
+    + "],datasets:[{label:%27Problems%20Solved%27,data:["
+    + ",".join(map(str, chart_values))
+    + "],fill:false,borderWidth:3,pointRadius:4}]},options:{"
+    "scales:{xAxes:[{display:true}],yAxes:[{beginAtZero:true}]},"
+    "legend:{display:false}}}"
+)
+
+readme_lines = [
+    "# 💻 Daily Coding Progress",
+    "",
+    "🎯 Total Solved",
+    "",
+    f"**{total} Problems**",
+    "",
+    "<!-- DAILY_CODING_PROGRESS_CHART_START -->",
+    f"![Daily Coding Progress]({chart_url})",
+    "<!-- DAILY_CODING_PROGRESS_CHART_END -->",
+    ""
+]
+
+with open(readme, "w", encoding="utf-8") as file:
+    file.write("\n".join(readme_lines))
+
 print("Daily-Coding-Progress.md updated successfully!")
+print("README.md updated successfully!")
 print(f"LeetCode: {total_leetcode}")
 print(f"Codeforces: {total_codeforces}")
 print(f"Total solved: {total}")
