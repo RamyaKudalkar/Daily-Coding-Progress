@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Daily Coding Progress</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;padding:20px}
+h1{text-align:center}
+canvas{max-height:500px}
+</style>
+</head>
+<body>
+<h1>💻 Daily Coding Progress</h1>
+<canvas id="progressChart"></canvas>
+<script>
+const dates=['2026-09-15', '2026-09-16', '2026-09-17', '2026-09-18', '2026-09-19', '2026-09-20', '2026-09-21', '2026-09-22', '2026-09-23', '2026-09-24', '2026-09-25', '2026-09-26', '2026-09-27', '2026-09-28', '2026-09-29', '2026-09-30', '2026-10-01'];
+const values=[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
+
+new Chart(document.getElementById("progressChart"),{
+type:"bar",
+data:{
+labels:dates,
+datasets:[{
+label:"Questions Solved",
+data:values
+}]
+},
+options:{
+responsive:true,
+plugins:{
+tooltip:{
+callbacks:{
+label:function(context){
+return "Questions solved: "+context.raw;
+}
+}
+}
+},
+scales:{
+y:{beginAtZero:true,title:{display:true,text:"Questions Solved"}},
+x:{title:{display:true,text:"Date"}}
+}
+}
+});
+</script>
+</body>
+</html>
