@@ -170,11 +170,11 @@ chart_data = ",".join(
 
 chart_url = (
     "https://quickchart.io/chart?c="
-    "{type:%27line%27,data:{labels:["
+    "{type:%27bar%27,data:{labels:["
     + ",".join(f"%27{d}%27" for d in chart_dates)
     + "],datasets:[{label:%27Problems%20Solved%27,data:["
     + ",".join(map(str, chart_values))
-    + "],fill:false,borderWidth:3,pointRadius:4}]},options:{"
+    + "],borderWidth:0}]},options:{"
     "scales:{xAxes:[{display:true}],yAxes:[{beginAtZero:true}]},"
     "legend:{display:false}}}"
 )
