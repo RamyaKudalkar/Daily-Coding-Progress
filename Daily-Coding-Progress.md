@@ -1,6 +1,6 @@
 # 📊 Daily Coding Progress
 
-**Total Solved: 88**
+**Total Solved: 90**
 
 ## 📅 September 15, 2026
 
@@ -180,9 +180,11 @@
 
 ## 📅 October 01, 2026
 
-🟢 **LeetCode — 3**
+🟢 **LeetCode — 5**
+• Q231 — Power Of Two
 • Q263 — Ugly Number
 • Q326 — Power Of Three
+• Q342 — Power Of Four
 • Q367 — Valid Perfect Square
 
 🔵 **Codeforces — 5**
