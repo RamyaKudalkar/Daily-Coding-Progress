@@ -43,7 +43,7 @@ def format_leetcode(name):
     if match:
         number = match.group(1)
         title = match.group(2).replace("-", " ").title()
-        return f"Q{number} â€” {title}"
+        return f"Q{number} — {title}"
 
     return name
 
@@ -53,7 +53,7 @@ def format_codeforces(name):
     if match:
         number = match.group(1)
         title = match.group(2)
-        return f"{number} â€” {title}"
+        return f"{number} — {title}"
 
     return name
 
@@ -119,7 +119,7 @@ total_codeforces = sum(len(v) for v in codeforces.values())
 total = total_leetcode + total_codeforces
 
 lines = [
-    "# ðŸ“Š Daily Coding Progress",
+    "# 📊 Daily Coding Progress",
     "",
     f"**Total Solved: {total}**",
     ""
@@ -130,19 +130,19 @@ for date in all_dates:
         date, "%Y-%m-%d"
     ).strftime("%B %d, %Y")
 
-    lines.append(f"## ðŸ“… {formatted_date}")
+    lines.append(f"## 📅 {formatted_date}")
     lines.append("")
 
     if date in leetcode:
-        lines.append(f"ðŸŸ¢ **LeetCode â€” {len(leetcode[date])}**")
+        lines.append(f"🟢 **LeetCode — {len(leetcode[date])}**")
         for problem in leetcode[date]:
-            lines.append(f"â€¢ {problem}")
+            lines.append(f"• {problem}")
         lines.append("")
 
     if date in codeforces:
-        lines.append(f"ðŸ”µ **Codeforces â€” {len(codeforces[date])}**")
+        lines.append(f"🔵 **Codeforces — {len(codeforces[date])}**")
         for problem in codeforces[date]:
-            lines.append(f"â€¢ {problem}")
+            lines.append(f"• {problem}")
         lines.append("")
 
     lines.append("---")
@@ -156,12 +156,12 @@ with open(output, "w", encoding="utf-8") as file:
 readme = os.path.join(BASE, "README.md")
 
 readme_lines = [
-    '📊 **Daily Coding Progress**',
-    '',
-    f'**{total} Problems Solved**',
-    '',
-    '[**View Interactive Chart →**](https://ramyakudalkar.github.io/Daily-Coding-Progress/?utm_source=chatgpt.com)',
-    ''
+    "📊 **Daily Coding Progress**",
+    "",
+    f"**{total} Problems Solved**",
+    "",
+    "[**View Interactive Chart →**](https://ramyakudalkar.github.io/Daily-Coding-Progress/?utm_source=chatgpt.com)",
+    ""
 ]
 
 with open(readme, "w", encoding="utf-8") as file:

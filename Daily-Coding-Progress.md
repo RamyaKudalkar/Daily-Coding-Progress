@@ -1,193 +1,190 @@
-# ðŸ“Š Daily Coding Progress
+# 📊 Daily Coding Progress
 
-**Total Solved: 86**
+**Total Solved: 85**
 
-## ðŸ“… September 15, 2026
+## 📅 September 15, 2026
 
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q1019 â€” Squares Of A Sorted Array
-â€¢ Q1031 â€” Add To Array Form Of Integer
-â€¢ Q11 â€” Container With Most Water
-â€¢ Q1168 â€” Duplicate Zeros
-â€¢ Q121 â€” Best Time To Buy And Sell Stock
-
----
-
-## ðŸ“… September 16, 2026
-
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q1231 â€” Replace Elements With Greatest Element On Right Side
-â€¢ Q136 â€” Single Number
-â€¢ Q1406 â€” Subtract The Product And Sum Of Digits Of An Integer
-â€¢ Q1421 â€” Find Numbers With Even Number Of Digits
-â€¢ Q1444 â€” Number Of Steps To Reduce A Number To Zero
+🟢 **LeetCode — 5**
+• Q1019 — Squares Of A Sorted Array
+• Q1031 — Add To Array Form Of Integer
+• Q11 — Container With Most Water
+• Q1168 — Duplicate Zeros
+• Q121 — Best Time To Buy And Sell Stock
 
 ---
 
-## ðŸ“… September 17, 2026
+## 📅 September 16, 2026
 
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q1528 â€” Kids With The Greatest Number Of Candies
-â€¢ Q1580 â€” Shuffle The Array
-â€¢ Q1585 â€” The Kth Factor Of N
-â€¢ Q1603 â€” Running Sum Of 1D Array
-â€¢ Q1610 â€” Xor Operation In An Array
-
----
-
-## ðŸ“… September 18, 2026
-
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q1630 â€” Count Odd Numbers In An Interval Range
-â€¢ Q1651 â€” Shuffle String
-â€¢ Q167 â€” Two Sum Ii Input Array Is Sorted
-â€¢ Q169 â€” Majority Element
-â€¢ Q1833 â€” Find The Highest Altitude
+🟢 **LeetCode — 5**
+• Q1231 — Replace Elements With Greatest Element On Right Side
+• Q136 — Single Number
+• Q1406 — Subtract The Product And Sum Of Digits Of An Integer
+• Q1421 — Find Numbers With Even Number Of Digits
+• Q1444 — Number Of Steps To Reduce A Number To Zero
 
 ---
 
-## ðŸ“… September 19, 2026
+## 📅 September 17, 2026
 
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q1878 â€” Check If Array Is Sorted And Rotated
-â€¢ Q1950 â€” Sign Of The Product Of An Array
-â€¢ Q2048 â€” Build Array From Permutation
-â€¢ Q2058 â€” Concatenation Of Array
-â€¢ Q2102 â€” Find The Middle Index In Array
-
----
-
-## ðŸ“… September 20, 2026
-
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q2137 â€” Final Value Of Variable After Performing Operations
-â€¢ Q2238 â€” A Number After A Double Reversal
-â€¢ Q2269 â€” Count Elements With Strictly Smaller And Greater Elements
-â€¢ Q2288 â€” Count Operations To Obtain Zero
-â€¢ Q238 â€” Product Of Array Except Self
+🟢 **LeetCode — 5**
+• Q1528 — Kids With The Greatest Number Of Candies
+• Q1580 — Shuffle The Array
+• Q1585 — The Kth Factor Of N
+• Q1603 — Running Sum Of 1D Array
+• Q1610 — Xor Operation In An Array
 
 ---
 
-## ðŸ“… September 21, 2026
+## 📅 September 18, 2026
 
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q2383 â€” Add Two Integers
-â€¢ Q2491 â€” Smallest Even Multiple
-â€¢ Q2556 â€” Convert The Temperature
-â€¢ Q258 â€” Add Digits
-â€¢ Q26 â€” Remove Duplicates From Sorted Array
-
----
-
-## ðŸ“… September 22, 2026
-
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q2608 â€” Count The Digits That Divide A Number
-â€¢ Q2624 â€” Difference Between Element Sum And Digit Sum Of An Array
-â€¢ Q27 â€” Remove Element
-â€¢ Q2714 â€” Left And Right Sum Differences
-â€¢ Q2752 â€” Sum Multiples
+🟢 **LeetCode — 5**
+• Q1630 — Count Odd Numbers In An Interval Range
+• Q1651 — Shuffle String
+• Q167 — Two Sum Ii Input Array Is Sorted
+• Q169 — Majority Element
+• Q1833 — Find The Highest Altitude
 
 ---
 
-## ðŸ“… September 23, 2026
+## 📅 September 19, 2026
 
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q2812 â€” Find The Maximum Achievable Number
-â€¢ Q283 â€” Move Zeroes
-â€¢ Q33 â€” Search In Rotated Sorted Array
-â€¢ Q3859 â€” Maximum Product Of Two Digits
-â€¢ Q412 â€” Fizz Buzz
-
----
-
-## ðŸ“… September 24, 2026
-
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q414 â€” Third Maximum Number
-â€¢ Q485 â€” Max Consecutive Ones
-â€¢ Q50 â€” Powx N
-â€¢ Q53 â€” Maximum Subarray
-â€¢ Q628 â€” Maximum Product Of Three Numbers
+🟢 **LeetCode — 5**
+• Q1878 — Check If Array Is Sorted And Rotated
+• Q1950 — Sign Of The Product Of An Array
+• Q2048 — Build Array From Permutation
+• Q2058 — Concatenation Of Array
+• Q2102 — Find The Middle Index In Array
 
 ---
 
-## ðŸ“… September 25, 2026
+## 📅 September 20, 2026
 
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q66 â€” Plus One
-â€¢ Q724 â€” Find Pivot Index
-â€¢ Q792 â€” Binary Search
-â€¢ Q81 â€” Search In Rotated Sorted Array Ii
-â€¢ Q88 â€” Merge Sorted Array
-
----
-
-## ðŸ“… September 26, 2026
-
-ðŸŸ¢ **LeetCode â€” 5**
-â€¢ Q882 â€” Peak Index In A Mountain Array
-â€¢ Q9 â€” Palindrome Number
-â€¢ Q932 â€” Monotonic Array
-â€¢ Q941 â€” Sort Array By Parity
-â€¢ Q978 â€” Valid Mountain Array
+🟢 **LeetCode — 5**
+• Q2137 — Final Value Of Variable After Performing Operations
+• Q2238 — A Number After A Double Reversal
+• Q2269 — Count Elements With Strictly Smaller And Greater Elements
+• Q2288 — Count Operations To Obtain Zero
+• Q238 — Product Of Array Except Self
 
 ---
 
-## ðŸ“… September 27, 2026
+## 📅 September 21, 2026
 
-ðŸ”µ **Codeforces â€” 5**
-â€¢ 1899A - Game with Integers
-â€¢ 2110B - Down with Brackets
-â€¢ 2170A - Maximum Neighborhood
-â€¢ 2194A - Lawn Mower
-â€¢ 617A - Elephant
-
----
-
-## ðŸ“… September 28, 2026
-
-ðŸ”µ **Codeforces â€” 5**
-â€¢ 1896A - Jagged Swaps
-â€¢ 2266A - Good Contest
-â€¢ 2266B - Three Piles
-â€¢ 2266C - AND, OR, Sort!
-â€¢ 4A - Watermelon
+🟢 **LeetCode — 5**
+• Q2383 — Add Two Integers
+• Q2491 — Smallest Even Multiple
+• Q2556 — Convert The Temperature
+• Q258 — Add Digits
+• Q26 — Remove Duplicates From Sorted Array
 
 ---
 
-## ðŸ“… September 29, 2026
+## 📅 September 22, 2026
 
-ðŸ”µ **Codeforces â€” 5**
-â€¢ 158A - Next Round
-â€¢ 2230A - Optimal Purchase
-â€¢ 231A - Team
-â€¢ 282A - Bit++
-â€¢ 71A - Way Too Long Words
-
----
-
-## ðŸ“… September 30, 2026
-
-ðŸ”µ **Codeforces â€” 5**
-â€¢ 1873C - Target Practice
-â€¢ 2179A - Blackslex and Password
-â€¢ 2233A - AI Project Development
-â€¢ 2266D - Falling Concrete
-â€¢ 50A - Domino piling
+🟢 **LeetCode — 5**
+• Q2608 — Count The Digits That Divide A Number
+• Q2624 — Difference Between Element Sum And Digit Sum Of An Array
+• Q27 — Remove Element
+• Q2714 — Left And Right Sum Differences
+• Q2752 — Sum Multiples
 
 ---
 
-## ðŸ“… October 01, 2026
+## 📅 September 23, 2026
 
-ðŸŸ¢ **LeetCode â€” 1**
-â€¢ Q263 â€” Ugly Number
+🟢 **LeetCode — 5**
+• Q2812 — Find The Maximum Achievable Number
+• Q283 — Move Zeroes
+• Q33 — Search In Rotated Sorted Array
+• Q3859 — Maximum Product Of Two Digits
+• Q412 — Fizz Buzz
 
-ðŸ”µ **Codeforces â€” 5**
-â€¢ 112A - Petya and Strings
-â€¢ 236A - Boy or Girl
-â€¢ 263A - Beautiful Matrix
-â€¢ 281A - Word Capitalization
-â€¢ 791A - Bear and Big Brother
+---
+
+## 📅 September 24, 2026
+
+🟢 **LeetCode — 5**
+• Q414 — Third Maximum Number
+• Q485 — Max Consecutive Ones
+• Q50 — Powx N
+• Q53 — Maximum Subarray
+• Q628 — Maximum Product Of Three Numbers
+
+---
+
+## 📅 September 25, 2026
+
+🟢 **LeetCode — 5**
+• Q66 — Plus One
+• Q724 — Find Pivot Index
+• Q792 — Binary Search
+• Q81 — Search In Rotated Sorted Array Ii
+• Q88 — Merge Sorted Array
+
+---
+
+## 📅 September 26, 2026
+
+🟢 **LeetCode — 5**
+• Q882 — Peak Index In A Mountain Array
+• Q9 — Palindrome Number
+• Q932 — Monotonic Array
+• Q941 — Sort Array By Parity
+• Q978 — Valid Mountain Array
+
+---
+
+## 📅 September 27, 2026
+
+🔵 **Codeforces — 5**
+• 1899A - Game with Integers
+• 2110B - Down with Brackets
+• 2170A - Maximum Neighborhood
+• 2194A - Lawn Mower
+• 617A - Elephant
+
+---
+
+## 📅 September 28, 2026
+
+🔵 **Codeforces — 5**
+• 1896A - Jagged Swaps
+• 2266A - Good Contest
+• 2266B - Three Piles
+• 2266C - AND, OR, Sort!
+• 4A - Watermelon
+
+---
+
+## 📅 September 29, 2026
+
+🔵 **Codeforces — 5**
+• 158A - Next Round
+• 2230A - Optimal Purchase
+• 231A - Team
+• 282A - Bit++
+• 71A - Way Too Long Words
+
+---
+
+## 📅 September 30, 2026
+
+🔵 **Codeforces — 5**
+• 1873C - Target Practice
+• 2179A - Blackslex and Password
+• 2233A - AI Project Development
+• 2266D - Falling Concrete
+• 50A - Domino piling
+
+---
+
+## 📅 October 01, 2026
+
+🔵 **Codeforces — 5**
+• 112A - Petya and Strings
+• 236A - Boy or Girl
+• 263A - Beautiful Matrix
+• 281A - Word Capitalization
+• 791A - Bear and Big Brother
 
 ---
