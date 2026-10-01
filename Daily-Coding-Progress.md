@@ -1,6 +1,6 @@
 # ðŸ“Š Daily Coding Progress
 
-**Total Solved: 85**
+**Total Solved: 86**
 
 ## ðŸ“… September 15, 2026
 
@@ -179,6 +179,9 @@
 ---
 
 ## ðŸ“… October 01, 2026
+
+ðŸŸ¢ **LeetCode â€” 1**
+â€¢ Q263 â€” Ugly Number
 
 ðŸ”µ **Codeforces â€” 5**
 â€¢ 112A - Petya and Strings
