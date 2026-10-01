@@ -1,6 +1,6 @@
 # 📊 Daily Coding Progress
 
-**Total Solved: 86**
+**Total Solved: 88**
 
 ## 📅 September 15, 2026
 
@@ -180,8 +180,10 @@
 
 ## 📅 October 01, 2026
 
-🟢 **LeetCode — 1**
+🟢 **LeetCode — 3**
 • Q263 — Ugly Number
+• Q326 — Power Of Three
+• Q367 — Valid Perfect Square
 
 🔵 **Codeforces — 5**
 • 112A - Petya and Strings
