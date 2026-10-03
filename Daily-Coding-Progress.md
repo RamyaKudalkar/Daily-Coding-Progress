@@ -1,6 +1,6 @@
 # 📊 Daily Coding Progress
 
-**Total Solved: 95**
+**Total Solved: 97**
 
 ## 📅 September 15, 2026
 
@@ -204,5 +204,13 @@
 • 469A - I Wanna Be the Guy
 • 732A - Buy a Shovel
 • 734A - Anton and Danik
+
+---
+
+## 📅 October 03, 2026
+
+🔵 **Codeforces — 2**
+• 1551A - Polycarp and Coins
+• 1742A - Sum
 
 ---
