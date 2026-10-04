@@ -242,14 +242,10 @@ with open(OUTPUT_FILE,"w",encoding="utf-8") as f:
 
 
 with open(README_FILE,"w",encoding="utf-8") as f:
-
-    f.write("# Daily-Coding-Progress\n\n")
-    f.write("📊 **Daily Coding Progress**\n\n")
-    f.write(f"**Total Solved: {total}**\n\n")
-    f.write(
-        "[**View Interactive Chart →**]"
-        "(https://ramyakudalkar.github.io/Daily-Coding-Progress/)\n"
-    )
+    f.write("## 📊 Daily-Coding-Progress\n\n")
+    f.write("### 🎯 Total Solved\n\n")
+    f.write(f"**{total} Problems**\n\n")
+    f.write("[**View Interactive Chart →**](https://ramyakudalkar.github.io/Daily-Coding-Progress/)\n")
 
 
 print("Daily-Coding-Progress.md updated successfully!")
