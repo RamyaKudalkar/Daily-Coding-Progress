@@ -112,8 +112,11 @@ def get_problems(repo, platform):
             if date:
                 problems[date].append(format_leetcode(item))
 
-    for date in problems:
+    for date in list(problems.keys()):
         problems[date] = sorted(set(problems[date]))
+
+        if not problems[date]:
+            del problems[date]
 
     return problems
 
@@ -134,6 +137,9 @@ lines = [
 ]
 
 for date in all_dates:
+    if not leetcode.get(date) and not codeforces.get(date):
+        continue
+
     formatted_date = datetime.strptime(
         date, "%Y-%m-%d"
     ).strftime("%B %d, %Y")
@@ -141,7 +147,7 @@ for date in all_dates:
     lines.append(f"## 📅 {formatted_date}")
     lines.append("")
 
-    if date in leetcode:
+    if date in leetcode and leetcode[date]:
         lines.append(f"🟢 **LeetCode — {len(leetcode[date])}**")
 
         for problem in leetcode[date]:
@@ -149,7 +155,7 @@ for date in all_dates:
 
         lines.append("")
 
-    if date in codeforces:
+    if date in codeforces and codeforces[date]:
         lines.append(f"🔵 **Codeforces — {len(codeforces[date])}**")
 
         for problem in codeforces[date]:
@@ -170,7 +176,7 @@ readme = os.path.join(BASE, "README.md")
 readme_lines = [
     "📊 **Daily Coding Progress**",
     "",
-    f"**{total} Problems Solved**",
+    f"**Total Solved: {total}**",
     "",
     "[**View Interactive Chart →**](https://ramyakudalkar.github.io/Daily-Coding-Progress/?utm_source=chatgpt.com)",
     ""
