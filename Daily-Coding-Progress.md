@@ -1,6 +1,6 @@
 # 📊 Daily Coding Progress
 
-**Total Solved: 102**
+**Total Solved: 103**
 
 ## 📅 September 15, 2026
 
@@ -220,7 +220,8 @@
 
 ## 📅 October 04, 2026
 
-🔵 **Codeforces — 2**
+🔵 **Codeforces — 3**
+• 1399A - Remove Smallest
 • 1807A - Plus or Minus
 • 581A - Vasya the Hipster
 
