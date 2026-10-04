@@ -1,6 +1,6 @@
 # 📊 Daily Coding Progress
 
-**Total Solved: 98**
+**Total Solved: 100**
 
 ## 📅 September 15, 2026
 
@@ -209,15 +209,17 @@
 
 ## 📅 October 03, 2026
 
-🔵 **Codeforces — 2**
+🔵 **Codeforces — 5**
 • 1551A - Polycarp and Coins
+• 1669A - Division?
+• 1703A - YES or YES?
 • 1742A - Sum
+• 339A - Helpful Maths
 
 ---
 
 ## 📅 October 04, 2026
 
-🔵 **Codeforces — 1**
-• 339A - Helpful Maths
+🔵 **Codeforces — 0**
 
 ---

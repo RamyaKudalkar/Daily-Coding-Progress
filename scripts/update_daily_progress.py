@@ -47,16 +47,6 @@ def format_leetcode(name):
 
     return name
 
-def format_codeforces(name):
-    match = re.match(r"(\d+[A-Z]?)[\s-]+(.+)", name)
-
-    if match:
-        number = match.group(1)
-        title = match.group(2)
-        return f"{number} — {title}"
-
-    return name
-
 def get_problems(repo, platform):
     problems = defaultdict(list)
 
@@ -88,6 +78,24 @@ def get_problems(repo, platform):
                 if match:
                     display = f"{match.group(1)}{match.group(2)}"
                     problems[date].append(display)
+
+        manual_problems = {
+            "1669/A - Division?": "2026-10-03",
+            "1703/A - YES or YES?": "2026-10-03",
+            "339/A - Helpful Maths": "2026-10-03"
+        }
+
+        for folder, date in manual_problems.items():
+            match = re.match(r"^(\d+)/([A-Z]\s*-\s*.+)$", folder)
+
+            if match:
+                display = f"{match.group(1)}{match.group(2)}"
+
+                for old_date in list(problems.keys()):
+                    if display in problems[old_date]:
+                        problems[old_date].remove(display)
+
+                problems[date].append(display)
 
     else:
         for item in os.listdir(repo):
@@ -135,14 +143,18 @@ for date in all_dates:
 
     if date in leetcode:
         lines.append(f"🟢 **LeetCode — {len(leetcode[date])}**")
+
         for problem in leetcode[date]:
             lines.append(f"• {problem}")
+
         lines.append("")
 
     if date in codeforces:
         lines.append(f"🔵 **Codeforces — {len(codeforces[date])}**")
+
         for problem in codeforces[date]:
             lines.append(f"• {problem}")
+
         lines.append("")
 
     lines.append("---")
