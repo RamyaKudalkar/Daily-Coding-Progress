@@ -1,7 +1,5 @@
 from pathlib import Path
-import subprocess,re,requests
-from datetime import datetime,timezone
-from datetime import datetime,timezone
+import subprocess,re
 
 BASE=Path(__file__).resolve().parent.parent
 
@@ -21,31 +19,16 @@ for item in repos[0].iterdir():
         if d:
             counts[d]=counts.get(d,0)+1
 
-response=requests.get("https://codeforces.com/api/user.status?handle=RamyaKudalkar",timeout=20)
-data=response.json()
+folders=set()
+for f in git(repos[1],["ls-files"]).splitlines():
+    m=re.match(r"^(\d+/[A-Z]\s*-\s*[^/]+)/",f)
+    if m:
+        folders.add(m.group(1))
 
-accepted=set()
-
-for sub in data["result"]:
-    if sub.get("verdict")!="OK":
-        continue
-
-    contest_id=sub.get("contestId")
-    index=sub.get("problem",{}).get("index")
-    timestamp=sub.get("creationTimeSeconds")
-
-    if not contest_id or not index or not timestamp:
-        continue
-
-    key=f"{contest_id}/{index}"
-
-    if key in accepted:
-        continue
-
-    accepted.add(key)
-
-    d=datetime.fromtimestamp(timestamp,timezone.utc).strftime("%Y-%m-%d")
-    counts[d]=counts.get(d,0)+1
+for folder in folders:
+    d=get_date(repos[1],folder)
+    if d:
+        counts[d]=counts.get(d,0)+1
 
 dates=sorted(counts)
 values=[counts[d] for d in dates]
