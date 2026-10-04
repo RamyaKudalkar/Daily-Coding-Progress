@@ -1,189 +1,256 @@
 import os
 import re
 import subprocess
+import requests
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime,timezone
 
-BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR=os.path.expanduser("~")
+LEETCODE_DIR=os.path.join(BASE_DIR,"LeetCode")
+OUTPUT_FILE="Daily-Coding-Progress.md"
+README_FILE="README.md"
 
-REPOS = {
-    "LeetCode": os.path.expanduser("~/LeetCode"),
-    "Codeforces": os.path.expanduser("~/Codeforces")
-}
+def get_leetcode():
+    problems=defaultdict(list)
 
-def git_output(repo, args):
-    try:
-        result = subprocess.run(
-            ["git", "-C", repo] + args,
-            capture_output=True,
-            text=True,
-            check=True
-        )
-        return result.stdout.strip()
-    except subprocess.CalledProcessError:
-        return ""
-
-def get_problem_date(repo, folder):
-    output = git_output(
-        repo,
-        ["log", "--diff-filter=A", "--format=%ad", "--date=short", "--", folder]
-    )
-
-    if not output:
-        output = git_output(
-            repo,
-            ["log", "-1", "--format=%ad", "--date=short", "--", folder]
-        )
-
-    return output.splitlines()[-1] if output else None
-
-def format_leetcode(name):
-    match = re.match(r"(\d+)[-_](.+)", name)
-
-    if match:
-        number = match.group(1)
-        title = match.group(2).replace("-", " ").title()
-        return f"Q{number} — {title}"
-
-    return name
-
-def get_problems(repo, platform):
-    problems = defaultdict(list)
-
-    if not os.path.isdir(repo):
+    if not os.path.exists(LEETCODE_DIR):
         return problems
 
-    if platform == "Codeforces":
-        result = subprocess.run(
-            ["git", "-C", repo, "ls-files"],
+    try:
+        result=subprocess.run(
+            ["git","-C",LEETCODE_DIR,"log","--all","--format=%ad|%s","--date=short"],
             capture_output=True,
-            text=True,
-            check=True
+            text=True
         )
 
-        folders = set()
+        seen=set()
 
-        for file in result.stdout.splitlines():
-            match = re.match(r"^(\d+/[A-Z]\s*-\s*[^/]+)/", file)
+        for line in result.stdout.splitlines():
+            parts=line.split("|",1)
 
-            if match:
-                folders.add(match.group(1))
+            if len(parts)!=2:
+                continue
+
+            date,message=parts
+
+            match=re.search(r"(\d+)-[a-z0-9]+",message.lower())
+
+            if not match:
+                continue
+
+            number=match.group(1)
+
+            folder_match=re.search(
+                rf"(\d+-[a-z0-9][a-z0-9-]*)",
+                message.lower()
+            )
+
+            if folder_match:
+                problem=folder_match.group(1)
+            else:
+                continue
+
+            key=problem
+
+            if key in seen:
+                continue
+
+            seen.add(key)
+            problems[date].append(problem)
+
+        # If git history does not contain every problem,
+        # count the folders and use their latest git date.
+        folders=[]
+
+        for name in os.listdir(LEETCODE_DIR):
+            path=os.path.join(LEETCODE_DIR,name)
+
+            if os.path.isdir(path) and re.match(r"^\d+-",name):
+                folders.append(name)
 
         for folder in folders:
-            date = get_problem_date(repo, folder)
+            try:
+                result=subprocess.run(
+                    [
+                        "git",
+                        "-C",
+                        LEETCODE_DIR,
+                        "log",
+                        "-1",
+                        "--format=%ad",
+                        "--date=short",
+                        "--",
+                        folder
+                    ],
+                    capture_output=True,
+                    text=True
+                )
 
-            if date:
-                match = re.match(r"^(\d+)/([A-Z]\s*-\s*.+)$", folder)
+                date=result.stdout.strip()
 
-                if match:
-                    display = f"{match.group(1)}{match.group(2)}"
-                    problems[date].append(display)
+                if date:
+                    already=False
 
-        manual_problems = {
-            "1669/A - Division?": "2026-10-03",
-            "1703/A - YES or YES?": "2026-10-03",
-            "339/A - Helpful Maths": "2026-10-03"
-        }
+                    for values in problems.values():
+                        if folder in values:
+                            already=True
+                            break
 
-        for folder, date in manual_problems.items():
-            match = re.match(r"^(\d+)/([A-Z]\s*-\s*.+)$", folder)
+                    if not already:
+                        problems[date].append(folder)
 
-            if match:
-                display = f"{match.group(1)}{match.group(2)}"
+            except:
+                pass
 
-                for old_date in list(problems.keys()):
-                    if display in problems[old_date]:
-                        problems[old_date].remove(display)
-
-                problems[date].append(display)
-
-    else:
-        for item in os.listdir(repo):
-            path = os.path.join(repo, item)
-
-            if not os.path.isdir(path):
-                continue
-
-            if not item or not item[0].isdigit():
-                continue
-
-            date = get_problem_date(repo, item)
-
-            if date:
-                problems[date].append(format_leetcode(item))
-
-    for date in list(problems.keys()):
-        problems[date] = sorted(set(problems[date]))
-
-        if not problems[date]:
-            del problems[date]
+    except Exception as e:
+        print("LeetCode error:",e)
 
     return problems
 
-leetcode = get_problems(REPOS["LeetCode"], "LeetCode")
-codeforces = get_problems(REPOS["Codeforces"], "Codeforces")
 
-all_dates = sorted(set(leetcode) | set(codeforces))
+def get_codeforces():
+    problems=defaultdict(list)
 
-total_leetcode = sum(len(v) for v in leetcode.values())
-total_codeforces = sum(len(v) for v in codeforces.values())
-total = total_leetcode + total_codeforces
+    try:
+        url="https://codeforces.com/api/user.status?handle=RamyaKudalkar"
 
-lines = [
-    "# 📊 Daily Coding Progress",
-    "",
-    f"**Total Solved: {total}**",
-    ""
-]
+        response=requests.get(url,timeout=20)
+        response.raise_for_status()
 
-for date in all_dates:
-    if not leetcode.get(date) and not codeforces.get(date):
-        continue
+        data=response.json()
 
-    formatted_date = datetime.strptime(
-        date, "%Y-%m-%d"
-    ).strftime("%B %d, %Y")
+        if data.get("status")!="OK":
+            return problems
 
-    lines.append(f"## 📅 {formatted_date}")
-    lines.append("")
+        submissions=data["result"]
 
-    if date in leetcode and leetcode[date]:
-        lines.append(f"🟢 **LeetCode — {len(leetcode[date])}**")
+        accepted={}
 
-        for problem in leetcode[date]:
-            lines.append(f"• {problem}")
+        for sub in submissions:
 
-        lines.append("")
+            if sub.get("verdict")!="OK":
+                continue
 
-    if date in codeforces and codeforces[date]:
-        lines.append(f"🔵 **Codeforces — {len(codeforces[date])}**")
+            contest_id=sub.get("contestId")
+            index=sub.get("problem",{}).get("index")
+            name=sub.get("problem",{}).get("name")
+            timestamp=sub.get("creationTimeSeconds")
 
-        for problem in codeforces[date]:
-            lines.append(f"• {problem}")
+            if not contest_id or not index or not name or not timestamp:
+                continue
 
-        lines.append("")
+            key=f"{contest_id}/{index}"
 
-    lines.append("---")
-    lines.append("")
+            date=datetime.fromtimestamp(
+                timestamp,
+                timezone.utc
+            ).strftime("%Y-%m-%d")
 
-output = os.path.join(BASE, "Daily-Coding-Progress.md")
+            if key not in accepted:
+                accepted[key]=(date,name)
+            else:
+                old_date=accepted[key][0]
 
-with open(output, "w", encoding="utf-8") as file:
-    file.write("\n".join(lines))
+                if date<old_date:
+                    accepted[key]=(date,name)
 
-readme = os.path.join(BASE, "README.md")
+        for key,(date,name) in accepted.items():
 
-readme_lines = [
-    "📊 **Daily Coding Progress**",
-    "",
-    f"**Total Solved: {total}**",
-    "",
-    "[**View Interactive Chart →**](https://ramyakudalkar.github.io/Daily-Coding-Progress/?utm_source=chatgpt.com)",
-    ""
-]
+            problems[date].append(
+                f"{key} - {name}"
+            )
 
-with open(readme, "w", encoding="utf-8") as file:
-    file.write("\n".join(readme_lines))
+    except Exception as e:
+        print("Codeforces API error:",e)
+
+    return problems
+
+
+leetcode=get_leetcode()
+codeforces=get_codeforces()
+
+for date in list(leetcode.keys()):
+    leetcode[date]=sorted(set(leetcode[date]))
+
+    if not leetcode[date]:
+        del leetcode[date]
+
+for date in list(codeforces.keys()):
+    codeforces[date]=sorted(set(codeforces[date]))
+
+    if not codeforces[date]:
+        del codeforces[date]
+
+
+leetcode_unique=set()
+
+for values in leetcode.values():
+    for problem in values:
+        leetcode_unique.add(problem)
+
+
+codeforces_unique=set()
+
+for values in codeforces.values():
+    for problem in values:
+        codeforces_unique.add(problem)
+
+
+total_leetcode=len(leetcode_unique)
+total_codeforces=len(codeforces_unique)
+total=total_leetcode+total_codeforces
+
+
+all_dates=sorted(
+    set(leetcode.keys())|set(codeforces.keys()),
+    reverse=True
+)
+
+
+with open(OUTPUT_FILE,"w",encoding="utf-8") as f:
+
+    f.write("# 📊 Daily Coding Progress\n\n")
+    f.write(f"**Total Solved: {total}**\n\n")
+
+    for date in all_dates:
+
+        if not leetcode.get(date) and not codeforces.get(date):
+            continue
+
+        dt=datetime.strptime(date,"%Y-%m-%d")
+        formatted=dt.strftime("%B %d, %Y")
+
+        f.write(f"## 📅 {formatted}\n\n")
+
+        if leetcode.get(date):
+
+            f.write("🟢 **LeetCode**\n\n")
+
+            for problem in leetcode[date]:
+                f.write(f"- {problem}\n")
+
+            f.write("\n")
+
+        if codeforces.get(date):
+
+            f.write("🔵 **Codeforces**\n\n")
+
+            for problem in codeforces[date]:
+                f.write(f"- {problem}\n")
+
+            f.write("\n")
+
+
+with open(README_FILE,"w",encoding="utf-8") as f:
+
+    f.write("# Daily-Coding-Progress\n\n")
+    f.write("📊 **Daily Coding Progress**\n\n")
+    f.write(f"**Total Solved: {total}**\n\n")
+    f.write(
+        "[**View Interactive Chart →**]"
+        "(https://ramyakudalkar.github.io/Daily-Coding-Progress/)\n"
+    )
+
 
 print("Daily-Coding-Progress.md updated successfully!")
 print("README.md updated successfully!")

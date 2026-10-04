@@ -1,5 +1,7 @@
+# Daily-Coding-Progress
+
 📊 **Daily Coding Progress**
 
-**Total Solved: 103**
+**Total Solved: 105**
 
-[**View Interactive Chart →**](https://ramyakudalkar.github.io/Daily-Coding-Progress/?utm_source=chatgpt.com)
+[**View Interactive Chart →**](https://ramyakudalkar.github.io/Daily-Coding-Progress/)
