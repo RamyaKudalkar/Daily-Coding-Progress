@@ -1,6 +1,6 @@
 # 📊 Daily Coding Progress
 
-**Total Solved: 100**
+**Total Solved: 102**
 
 ## 📅 September 15, 2026
 
@@ -215,5 +215,13 @@
 • 1703A - YES or YES?
 • 1742A - Sum
 • 339A - Helpful Maths
+
+---
+
+## 📅 October 04, 2026
+
+🔵 **Codeforces — 2**
+• 1807A - Plus or Minus
+• 581A - Vasya the Hipster
 
 ---
