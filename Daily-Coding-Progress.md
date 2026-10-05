@@ -1,6 +1,12 @@
 # 📊 Daily Coding Progress
 
-**Total Solved: 105**
+**Total Solved: 106**
+
+## 📅 October 05, 2026
+
+🔵 **Codeforces**
+
+- 266/A - Stones on the Table
 
 ## 📅 October 04, 2026
 
