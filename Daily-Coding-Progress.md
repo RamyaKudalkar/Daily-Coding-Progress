@@ -136,17 +136,6 @@
 
 ## 📅 September 27, 2026
 
-🟢 **LeetCode — 5**
-• 882 — Peak Index In A Mountain Array
-• 9 — Palindrome Number
-• 932 — Monotonic Array
-• 941 — Sort Array By Parity
-• 978 — Valid Mountain Array
-
----
-
-## 📅 September 28, 2026
-
 🔵 **Codeforces — 5**
 • 112/A - Petya and Strings
 • 1399/A - Remove Smallest
@@ -154,9 +143,10 @@
 • 1551/A - Polycarp and Coins
 • 158/A - Next Round
 
+
 ---
 
-## 📅 September 29, 2026
+## 📅 September 28, 2026
 
 🔵 **Codeforces — 5**
 • 1669/A - Division?
@@ -165,9 +155,8 @@
 • 1807/A - Plus or Minus
 • 1873/C - Target Practice
 
----
 
-## 📅 September 30, 2026
+## 📅 September 29, 2026
 
 🔵 **Codeforces — 5**
 • 1878/A - How Much Does Daytona Cost?
@@ -176,21 +165,36 @@
 • 1993/A - Question Marks
 • 1999/A - A+B Again?
 
----
 
-## 📅 October 1, 2026
+## 📅 September 30, 2026
 
-🔵 **Codeforces — 10**
+🔵 **Codeforces — 5**
 • 2110/B - Down with Brackets
 • 2170/A - Maximum Neighborhood
 • 2179/A - Blackslex and Password
 • 2194/A - Lawn Mower
 • 2230/A - Optimal Purchase
-• 2233/A - AI Project Development
-• 2266/A - Good Contest
-• 2266/B - Three Piles
-• 2266/C - AND, OR, Sort!
-• 2266/D - Falling Concrete
+
+
+---
+
+## 📅 October 1, 2026
+
+🟢 **LeetCode — 5**
+• 882 — Peak Index In A Mountain Array
+• 9 — Palindrome Number
+• 932 — Monotonic Array
+• 941 — Sort Array By Parity
+• 978 — Valid Mountain Array
+
+
+🔵 **Codeforces — 5**
+• 2110/B - Down with Brackets
+• 2170/A - Maximum Neighborhood
+• 2179/A - Blackslex and Password
+• 2194/A - Lawn Mower
+• 2230/A - Optimal Purchase
+
 
 ---
 
