@@ -2,231 +2,218 @@
 
 **Total Solved: 105**
 
-## 📅 September 15, 2026
+## 📅 October 04, 2026
 
-🟢 **LeetCode — 5**
-• 1019 — Squares Of A Sorted Array
-• 1031 — Add To Array Form Of Integer
-• 11 — Container With Most Water
-• 1168 — Duplicate Zeros
-• 121 — Best Time To Buy And Sell Stock
+🔵 **Codeforces**
 
----
+- 1399/A - Remove Smallest
+- 1807/A - Plus or Minus
+- 1878/A - How Much Does Daytona Cost?
+- 1999/A - A+B Again?
+- 581/A - Vasya the Hipster
 
-## 📅 September 16, 2026
+## 📅 October 03, 2026
 
-🟢 **LeetCode — 5**
-• 1231 — Replace Elements With Greatest Element On Right Side
-• 136 — Single Number
-• 1406 — Subtract The Product And Sum Of Digits Of An Integer
-• 1421 — Find Numbers With Even Number Of Digits
-• 1444 — Number Of Steps To Reduce A Number To Zero
+🔵 **Codeforces**
 
----
+- 1551/A - Polycarp and Coins
+- 1669/A - Division?
+- 1703/A - YES or YES?
+- 1742/A - Sum
+- 339/A - Helpful Maths
 
-## 📅 September 17, 2026
+## 📅 October 02, 2026
 
-🟢 **LeetCode — 5**
-• 1528 — Kids With The Greatest Number Of Candies
-• 1580 — Shuffle The Array
-• 1585 — The Kth Factor Of N
-• 1603 — Running Sum Of 1D Array
-• 1610 — Xor Operation In An Array
+🔵 **Codeforces**
 
----
+- 1426/A - Floor Number
+- 1993/A - Question Marks
+- 469/A - I Wanna Be the Guy
+- 732/A - Buy a Shovel
+- 734/A - Anton and Danik
 
-## 📅 September 18, 2026
+## 📅 October 01, 2026
 
-🟢 **LeetCode — 5**
-• 1630 — Count Odd Numbers In An Interval Range
-• 1651 — Shuffle String
-• 167 — Two Sum II Input Array Is Sorted
-• 169 — Majority Element
-• 1833 — Find The Highest Altitude
+🟢 **LeetCode**
 
----
-
-## 📅 September 19, 2026
-
-🟢 **LeetCode — 5**
-• 1878 — Check If Array Is Sorted And Rotated
-• 1950 — Sign Of The Product Of An Array
-• 2048 — Build Array From Permutation
-• 2058 — Concatenation Of Array
-• 2102 — Find The Middle Index In Array
-
----
-
-## 📅 September 20, 2026
-
-🟢 **LeetCode — 5**
-• 2137 — Final Value Of Variable After Performing Operations
-• 2238 — A Number After A Double Reversal
-• 2269 — Count Elements With Strictly Smaller And Greater Elements
-• 2288 — Count Operations To Obtain Zero
-• 231 — Power Of Two
-
----
-
-## 📅 September 21, 2026
-
-🟢 **LeetCode — 5**
-• 238 — Product Of Array Except Self
-• 2383 — Add Two Integers
-• 2491 — Smallest Even Multiple
-• 2556 — Convert The Temperature
-• 258 — Add Digits
-
----
-
-## 📅 September 22, 2026
-
-🟢 **LeetCode — 5**
-• 26 — Remove Duplicates From Sorted Array
-• 2608 — Count The Digits That Divide A Number
-• 2624 — Difference Between Element Sum And Digit Sum Of An Array
-• 263 — Ugly Number
-• 27 — Remove Element
-
----
-
-## 📅 September 23, 2026
-
-🟢 **LeetCode — 5**
-• 2714 — Left And Right Sum Differences
-• 2752 — Sum Multiples
-• 2812 — Find The Maximum Achievable Number
-• 283 — Move Zeroes
-• 326 — Power Of Three
-
----
-
-## 📅 September 24, 2026
-
-🟢 **LeetCode — 5**
-• 33 — Search In Rotated Sorted Array
-• 342 — Power Of Four
-• 367 — Valid Perfect Square
-• 3859 — Maximum Product Of Two Digits
-• 412 — Fizz Buzz
-
----
-
-## 📅 September 25, 2026
-
-🟢 **LeetCode — 5**
-• 414 — Third Maximum Number
-• 485 — Max Consecutive Ones
-• 50 — Powx N
-• 53 — Maximum Subarray
-• 628 — Maximum Product Of Three Numbers
-
----
-
-## 📅 September 26, 2026
-
-🟢 **LeetCode — 5**
-• 66 — Plus One
-• 724 — Find Pivot Index
-• 792 — Binary Search
-• 81 — Search In Rotated Sorted Array II
-• 88 — Merge Sorted Array
-
----
-
-## 📅 September 27, 2026
-
-🔵 **Codeforces — 5**
-• 112/A - Petya and Strings
-• 1399/A - Remove Smallest
-• 1426/A - Floor Number
-• 1551/A - Polycarp and Coins
-• 158/A - Next Round
-
-
----
-
-## 📅 September 28, 2026
-
-🔵 **Codeforces — 5**
-• 1669/A - Division?
-• 1703/A - YES or YES?
-• 1742/A - Sum
-• 1807/A - Plus or Minus
-• 1873/C - Target Practice
-
+- 231-power-of-two
+- 263-ugly-number
+- 326-power-of-three
+- 342-power-of-four
+- 367-valid-perfect-square
 
 ## 📅 September 29, 2026
 
-🔵 **Codeforces — 5**
-• 1878/A - How Much Does Daytona Cost?
-• 1896/A - Jagged Swaps
-• 1899/A - Game with Integers
-• 1993/A - Question Marks
-• 1999/A - A+B Again?
+🔵 **Codeforces**
 
+- 281/A - Word Capitalization
+- 791/A - Bear and Big Brother
 
-## 📅 September 30, 2026
+## 📅 September 28, 2026
 
-🔵 **Codeforces — 5**
-• 2110/B - Down with Brackets
-• 2170/A - Maximum Neighborhood
-• 2179/A - Blackslex and Password
-• 2194/A - Lawn Mower
-• 2230/A - Optimal Purchase
+🔵 **Codeforces**
 
+- 236/A - Boy or Girl
+- 263/A - Beautiful Matrix
 
----
+## 📅 September 27, 2026
 
-## 📅 October 1, 2026
+🔵 **Codeforces**
 
-🟢 **LeetCode — 5**
-• 882 — Peak Index In A Mountain Array
-• 9 — Palindrome Number
-• 932 — Monotonic Array
-• 941 — Sort Array By Parity
-• 978 — Valid Mountain Array
+- 112/A - Petya and Strings
+- 50/A - Domino piling
 
+## 📅 September 26, 2026
 
-🔵 **Codeforces — 5**
-• 2110/B - Down with Brackets
-• 2170/A - Maximum Neighborhood
-• 2179/A - Blackslex and Password
-• 2194/A - Lawn Mower
-• 2230/A - Optimal Purchase
+🟢 **LeetCode**
 
+- 882-peak-index-in-a-mountain-array
+- 9-palindrome-number
+- 932-monotonic-array
+- 941-sort-array-by-parity
+- 978-valid-mountain-array
 
----
+🔵 **Codeforces**
 
-## 📅 October 2, 2026
+- 1873/C - Target Practice
+- 2179/A - Blackslex and Password
+- 2233/A - AI Project Development
 
-🔵 **Codeforces — 5**
-• 231/A - Team
-• 236/A - Boy or Girl
-• 263/A - Beautiful Matrix
-• 281/A - Word Capitalization
-• 282/A - Bit++
+## 📅 September 25, 2026
 
----
+🟢 **LeetCode**
 
-## 📅 October 3, 2026
+- 66-plus-one
+- 724-find-pivot-index
+- 792-binary-search
+- 81-search-in-rotated-sorted-array-ii
+- 88-merge-sorted-array
 
-🔵 **Codeforces — 5**
-• 339/A - Helpful Maths
-• 4/A - Watermelon
-• 469/A - I Wanna Be the Guy
-• 50/A - Domino piling
-• 581/A - Vasya the Hipster
+🔵 **Codeforces**
 
----
+- 2266/D - Falling Concrete
 
-## 📅 October 4, 2026
+## 📅 September 24, 2026
 
-🔵 **Codeforces — 5**
-• 617/A - Elephant
-• 71/A - Way Too Long Words
-• 732/A - Buy a Shovel
-• 734/A - Anton and Danik
-• 791/A - Bear and Big Brother
+🟢 **LeetCode**
 
----
+- 414-third-maximum-number
+- 485-max-consecutive-ones
+- 50-powx-n
+- 53-maximum-subarray
+- 628-maximum-product-of-three-numbers
+
+🔵 **Codeforces**
+
+- 158/A - Next Round
+- 2230/A - Optimal Purchase
+- 231/A - Team
+- 282/A - Bit++
+- 71/A - Way Too Long Words
+
+## 📅 September 23, 2026
+
+🟢 **LeetCode**
+
+- 2812-find-the-maximum-achievable-number
+- 283-move-zeroes
+- 33-search-in-rotated-sorted-array
+- 3859-maximum-product-of-two-digits
+- 412-fizz-buzz
+
+🔵 **Codeforces**
+
+- 1896/A - Jagged Swaps
+- 2266/A - Good Contest
+- 2266/B - Three Piles
+- 2266/C - AND, OR, Sort!
+- 4/A - Watermelon
+
+## 📅 September 22, 2026
+
+🟢 **LeetCode**
+
+- 2608-count-the-digits-that-divide-a-number
+- 2624-difference-between-element-sum-and-digit-sum-of-an-array
+- 27-remove-element
+- 2714-left-and-right-sum-differences
+- 2752-sum-multiples
+
+## 📅 September 21, 2026
+
+🟢 **LeetCode**
+
+- 2383-add-two-integers
+- 2491-smallest-even-multiple
+- 2556-convert-the-temperature
+- 258-add-digits
+- 26-remove-duplicates-from-sorted-array
+
+## 📅 September 20, 2026
+
+🟢 **LeetCode**
+
+- 2137-final-value-of-variable-after-performing-operations
+- 2238-a-number-after-a-double-reversal
+- 2269-count-elements-with-strictly-smaller-and-greater-elements
+- 2288-count-operations-to-obtain-zero
+- 238-product-of-array-except-self
+
+🔵 **Codeforces**
+
+- 1899/A - Game with Integers
+- 2110/B - Down with Brackets
+- 2170/A - Maximum Neighborhood
+- 2194/A - Lawn Mower
+- 617/A - Elephant
+
+## 📅 September 19, 2026
+
+🟢 **LeetCode**
+
+- 1878-check-if-array-is-sorted-and-rotated
+- 1950-sign-of-the-product-of-an-array
+- 2048-build-array-from-permutation
+- 2058-concatenation-of-array
+- 2102-find-the-middle-index-in-array
+
+## 📅 September 18, 2026
+
+🟢 **LeetCode**
+
+- 1630-count-odd-numbers-in-an-interval-range
+- 1651-shuffle-string
+- 167-two-sum-ii-input-array-is-sorted
+- 169-majority-element
+- 1833-find-the-highest-altitude
+
+## 📅 September 17, 2026
+
+🟢 **LeetCode**
+
+- 1528-kids-with-the-greatest-number-of-candies
+- 1580-shuffle-the-array
+- 1585-the-kth-factor-of-n
+- 1603-running-sum-of-1d-array
+- 1610-xor-operation-in-an-array
+
+## 📅 September 16, 2026
+
+🟢 **LeetCode**
+
+- 1231-replace-elements-with-greatest-element-on-right-side
+- 136-single-number
+- 1406-subtract-the-product-and-sum-of-digits-of-an-integer
+- 1421-find-numbers-with-even-number-of-digits
+- 1444-number-of-steps-to-reduce-a-number-to-zero
+
+## 📅 September 15, 2026
+
+🟢 **LeetCode**
+
+- 1019-squares-of-a-sorted-array
+- 1031-add-to-array-form-of-integer
+- 11-container-with-most-water
+- 1168-duplicate-zeros
+- 121-best-time-to-buy-and-sell-stock
+
