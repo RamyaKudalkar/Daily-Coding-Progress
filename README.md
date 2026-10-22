@@ -2,6 +2,6 @@
 
 ### 🎯 Total Solved
 
-**106 Problems**
+**65 Problems**
 
 [**View Interactive Chart →**](https://ramyakudalkar.github.io/Daily-Coding-Progress/)
