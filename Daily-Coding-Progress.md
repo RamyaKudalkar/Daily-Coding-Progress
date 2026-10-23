@@ -1,6 +1,42 @@
 # 📊 Daily Coding Progress
 
-**Total Solved: 65**
+**Total Solved: 106**
+
+## 📅 October 05, 2026
+
+🔵 **Codeforces**
+
+- 266/A - Stones on the Table
+
+## 📅 October 04, 2026
+
+🔵 **Codeforces**
+
+- 1399/A - Remove Smallest
+- 1807/A - Plus or Minus
+- 1878/A - How Much Does Daytona Cost?
+- 1999/A - A+B Again?
+- 581/A - Vasya the Hipster
+
+## 📅 October 03, 2026
+
+🔵 **Codeforces**
+
+- 1551/A - Polycarp and Coins
+- 1669/A - Division?
+- 1703/A - YES or YES?
+- 1742/A - Sum
+- 339/A - Helpful Maths
+
+## 📅 October 02, 2026
+
+🔵 **Codeforces**
+
+- 1426/A - Floor Number
+- 1993/A - Question Marks
+- 469/A - I Wanna Be the Guy
+- 732/A - Buy a Shovel
+- 734/A - Anton and Danik
 
 ## 📅 October 01, 2026
 
@@ -12,6 +48,27 @@
 - 342-power-of-four
 - 367-valid-perfect-square
 
+## 📅 September 29, 2026
+
+🔵 **Codeforces**
+
+- 281/A - Word Capitalization
+- 791/A - Bear and Big Brother
+
+## 📅 September 28, 2026
+
+🔵 **Codeforces**
+
+- 236/A - Boy or Girl
+- 263/A - Beautiful Matrix
+
+## 📅 September 27, 2026
+
+🔵 **Codeforces**
+
+- 112/A - Petya and Strings
+- 50/A - Domino piling
+
 ## 📅 September 26, 2026
 
 🟢 **LeetCode**
@@ -21,6 +78,12 @@
 - 932-monotonic-array
 - 941-sort-array-by-parity
 - 978-valid-mountain-array
+
+🔵 **Codeforces**
+
+- 1873/C - Target Practice
+- 2179/A - Blackslex and Password
+- 2233/A - AI Project Development
 
 ## 📅 September 25, 2026
 
@@ -32,6 +95,10 @@
 - 81-search-in-rotated-sorted-array-ii
 - 88-merge-sorted-array
 
+🔵 **Codeforces**
+
+- 2266/D - Falling Concrete
+
 ## 📅 September 24, 2026
 
 🟢 **LeetCode**
@@ -42,6 +109,14 @@
 - 53-maximum-subarray
 - 628-maximum-product-of-three-numbers
 
+🔵 **Codeforces**
+
+- 158/A - Next Round
+- 2230/A - Optimal Purchase
+- 231/A - Team
+- 282/A - Bit++
+- 71/A - Way Too Long Words
+
 ## 📅 September 23, 2026
 
 🟢 **LeetCode**
@@ -51,6 +126,14 @@
 - 33-search-in-rotated-sorted-array
 - 3859-maximum-product-of-two-digits
 - 412-fizz-buzz
+
+🔵 **Codeforces**
+
+- 1896/A - Jagged Swaps
+- 2266/A - Good Contest
+- 2266/B - Three Piles
+- 2266/C - AND, OR, Sort!
+- 4/A - Watermelon
 
 ## 📅 September 22, 2026
 
@@ -81,6 +164,14 @@
 - 2269-count-elements-with-strictly-smaller-and-greater-elements
 - 2288-count-operations-to-obtain-zero
 - 238-product-of-array-except-self
+
+🔵 **Codeforces**
+
+- 1899/A - Game with Integers
+- 2110/B - Down with Brackets
+- 2170/A - Maximum Neighborhood
+- 2194/A - Lawn Mower
+- 617/A - Elephant
 
 ## 📅 September 19, 2026
 
